@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graph.jimpgraph.HelloController">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="600.0" scaleZ="0.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bcbcbc" height="100.0" layoutX="436.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <Rectangle arcHeight="5.0" fill="#bcbcbc" height="240.0" layoutX="436.0" layoutY="14.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="150.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616161" height="400.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bcbcbc" height="100.0" layoutX="436.0" layoutY="486.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bcbcbc" height="100.0" layoutX="436.0" layoutY="374.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <CheckBox fx:id="randWeightModeCheckBox" layoutX="450.0" layoutY="46.0" mnemonicParsing="false" onAction="#setRandWeightMode" prefHeight="17.0" prefWidth="122.0" text="RandWeightMode" />
+      <CheckBox fx:id="allRandModeCheckBox" layoutX="450.0" layoutY="68.0" mnemonicParsing="false" onAction="#setAllRandMode" prefHeight="17.0" prefWidth="122.0" text="AllRandMode" />
+      <CheckBox fx:id="conModeCheckBox" layoutX="450.0" layoutY="90.0" mnemonicParsing="false" onAction="#setConMode" prefHeight="17.0" prefWidth="122.0" text="ConMode" />
+      <Text layoutX="450.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wiersze" />
+      <Text layoutX="450.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kolumny" />
+      <Text layoutX="450.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min waga" />
+      <Text layoutX="450.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max waga" />
+      <Button layoutX="482.0" layoutY="223.0" mnemonicParsing="false" onAction="#generateGraph" text="Generuj" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616161" height="25.0" layoutX="436.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616161" height="25.0" layoutX="436.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616161" height="25.0" layoutX="436.0" layoutY="374.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616161" height="25.0" layoutX="14.0" layoutY="469.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+      <Text layoutX="450.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start" />
+      <Text layoutX="450.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Koniec" />
+      <Button layoutX="438.0" layoutY="336.0" mnemonicParsing="false" onAction="#searchGraph" prefHeight="16.0" prefWidth="50.0" text="Szukaj" />
+      <CheckBox fx:id="colorWeightCheckBox" layoutX="450.0" layoutY="415.0" mnemonicParsing="false" onAction="#onActivateColorCheckBox" prefHeight="17.0" prefWidth="122.0" text="Koloruj wagi" />
+      <CheckBox fx:id="onlyPathCheckBox" layoutX="450.0" layoutY="440.0" mnemonicParsing="false" onAction="#onActivateColorCheckBox" prefHeight="17.0" prefWidth="122.0" text="Tylko scieżka" />
+      <Text fill="WHITE" layoutX="484.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generator" />
+      <Text fill="WHITE" layoutX="462.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dijkstra" />
+      <Text fill="WHITE" layoutX="476.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyświetlanie" />
+      <Button layoutX="445.0" layoutY="545.0" mnemonicParsing="false" onAction="#runBfs" prefHeight="25.0" prefWidth="130.0" text="Badanie spójności" />
+      <Button layoutX="444.0" layoutY="500.0" mnemonicParsing="false" onAction="#readGraph" text="Wczytaj" />
+      <Button layoutX="516.0" layoutY="500.0" mnemonicParsing="false" onAction="#saveGraphToFile" prefHeight="25.0" prefWidth="58.0" text="Zapisz" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="25.0" layoutX="14.0" layoutY="389.0" stroke="BLACK" strokeType="INSIDE" width="400.0">
+         <fill>
+            <LinearGradient>
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.15988705189065305">
+                     <color>
+                        <Color red="0.6184819936752319" green="0.786870539188385" blue="0.9342105388641357" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.6189024390243902">
+                     <color>
+                        <Color red="0.26480263471603394" green="0.6185032725334167" blue="0.9078947305679321" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.5647059082984924" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fill="#cccccc" layoutX="199.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Waga" />
+      <Text fill="WHITE" layoutX="381.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+      <Text layoutX="24.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <Text fill="WHITE" layoutX="172.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dane wyjściowe" />
+      <TextField fx:id="rowsTextField" layoutX="522.0" layoutY="112.0" prefHeight="16.0" prefWidth="47.0" text="15" />
+      <TextField fx:id="columnsTextField" layoutX="522.0" layoutY="138.0" prefHeight="0.0" prefWidth="47.0" text="15" />
+      <TextField fx:id="minWeightTextField" layoutX="522.0" layoutY="164.0" prefHeight="0.0" prefWidth="47.0" text="0" />
+      <TextField fx:id="maxWeightTextField" layoutX="522.0" layoutY="190.0" prefHeight="0.0" prefWidth="47.0" text="1" />
+      <TextField fx:id="startDijkstraTextField" layoutX="487.0" layoutY="290.0" prefHeight="0.0" prefWidth="47.0" text="0" />
+      <TextField fx:id="endDijkstraTextField" layoutX="487.0" layoutY="315.0" prefHeight="0.0" prefWidth="47.0" text="1" />
+      <TextArea fx:id="standardOutput" editable="false" layoutX="14.0" layoutY="497.0" prefHeight="92.0" prefWidth="400.0" />
+      <TextField fx:id="readFileTextField" editable="false" layoutX="13.0" layoutY="564.0" onAction="#submitPath" prefHeight="25.0" prefWidth="386.0" visible="false" />
+      <TextField fx:id="getPathToGraphTextField" editable="false" layoutX="14.0" layoutY="536.0" text="Podaj ścieżkę do pliku:" visible="false" />
+   <Button layoutX="534.0" layoutY="336.0" mnemonicParsing="false" onAction="#dijkstraGraphical" text="Szukaj" />
+   <Line endY="73.0" layoutX="535.0" layoutY="289.0" startY="-24.0" />
+   <Text layoutX="544.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   <Circle fill="GREEN" layoutX="546.0" layoutY="310.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+   <Circle fill="RED" layoutX="574.0" layoutY="310.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfbfbf" height="48.0" layoutX="14.0" layoutY="418.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+   <Label layoutX="300.0" layoutY="441.0" prefWidth="30.0" text="Start:" />
+   <Label fx:id="startLabel" layoutX="330.0" layoutY="441.0" text="---" />
+   <Label layoutX="353.0" layoutY="441.0" text="Koniec:" />
+   <Label fx:id="endLabel" layoutX="392.0" layoutY="441.0" text="---" />
+   <Label layoutX="23.0" layoutY="422.0" text="Plik:" />
+   <Label layoutX="165.0" layoutY="517.0" />
+   <Label fx:id="fileLabel" layoutX="45.0" layoutY="417.0" prefHeight="26.0" prefWidth="367.0" text="---" wrapText="true">
+      <font>
+         <Font size="9.0" />
+      </font></Label>
+</AnchorPane>
